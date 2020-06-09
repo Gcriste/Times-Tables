@@ -1,4 +1,4 @@
-.pics {
+/* .pics {
 	background: #fff;
 	border-radius: 25px;
 	height: 200px;
@@ -12,16 +12,16 @@
 .pics:hover {
 	opacity: 0.8;
 	cursor: pointer;
-}
+} */
 .img-container {
 	height: 100%;
 	overflow: hidden;
 	text-align: center;
 	background: #6caddc;
 }
-img {
+/* img {
 	width: 100%;
-}
+} */
 
 .content {
 	padding-left: 1rem;

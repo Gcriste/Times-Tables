@@ -1,17 +1,21 @@
 .score,
 .highscore {
 	font-family: 'Gayathri', sans-serif;
-	font-size: 34px;
+	/* font-size: 34px; */
 }
 
-.gameScore {
+/* .gameScore {
 	border: 5px solid black;
 	border-radius: 15px;
 	background-color: #ffffff;
-}
+} */
 
-.gameScoreTwo {
+/* .gameScoreTwo {
 	border: 5px solid #6caddc;
 	padding: 10px;
 	border-radius: 10px;
+} */
+
+.status {
+	color: blue;
 }

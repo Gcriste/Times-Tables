@@ -15,7 +15,6 @@ class App extends Component {
 			rightAnswers: [],
 			score: 0,
 			highScore: 0,
-			goal: 15,
 			status: '',
 			numberA: 0,
 			numberB: 0,
@@ -82,27 +81,38 @@ class App extends Component {
 		return (
 			<Wrapper>
 				<Title>Times Tables!</Title>
-				<Score total={this.state.score} goal={15} status={this.state.status} highscore={this.state.highScore} />
+				<div className='container'>
+					<div className='card'>
+						<div className='row'>
+							<div className='col-md-6- offset-md-3'>
+								<Score
+									total={this.state.score}
+									status={this.state.status}
+									highscore={this.state.highScore}
+								/>
+							</div>
+						</div>
+						<div className='row'>
+							<div className='col-md-6 offset-md-3'>
+								<Main
+									numberA={this.state.numberA}
+									numberB={this.state.numberB}
+									correctAnswer={this.state.correctAnswer}
+								/>
+								<Input
+									value={this.state.userGuess}
+									onChange={this.handleCreateChange}
+									name='userGuess'
+									placeholder='Enter Answer'
+									type='name'
+								/>
 
-				<Main
-					// generateNumbers={this.generateNumbers}
-					// id={image.id}
-					// key={image.id}
-					numberA={this.state.numberA}
-					numberB={this.state.numberB}
-					correctAnswer={this.state.correctAnswer}
-					// name={image.name}
-					// image={image.image}
-				/>
-				<Input
-					value={this.state.userGuess}
-					onChange={this.handleCreateChange}
-					name='userGuess'
-					placeholder='Enter Answer'
-					type='name'
-				/>
+								<PostButton handleSubmit={this.handleSubmit} />
+							</div>
+						</div>
+					</div>
+				</div>
 
-				<PostButton handleSubmit={this.handleSubmit} />
 				<Footer> copyright @Gcriste 2020</Footer>
 			</Wrapper>
 		);

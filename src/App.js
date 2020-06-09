@@ -64,6 +64,16 @@ class App extends Component {
 				score: 0,
 				status: "I'm sorry that is not correct! The answer is " + this.state.correctAnswer
 			});
+
+			if (this.state.score > this.state.highScore) {
+				this.setState({
+					highScore: this.state.score
+				});
+			} else {
+				this.setState({
+					highScore: this.state.highScore
+				});
+			}
 		}
 		this.componentDidMount();
 	};

@@ -47,16 +47,25 @@ class App extends Component {
 
 	handleSubmit = (event) => {
 		event.preventDefault();
+
 		if (parseInt(this.state.userGuess) === this.state.correctAnswer) {
-			let rightAnswers = [];
-			rightAnswers.push(this.state.correctAnswer);
+			this.state.rightAnswers.push(this.state.correctAnswer);
 			this.setState({
-				rightAnswers: rightAnswers
+				rightAnswers: this.state.rightAnswers,
+				score: this.state.rightAnswers.length,
+				status: 'That is correct!'
 			});
+
 			console.log('right answer');
 		} else {
 			console.log('wrong answer');
+			this.setState({
+				rightAnswers: [],
+				score: 0,
+				status: "I'm sorry that is not correct! The answer is " + this.state.correctAnswer
+			});
 		}
+		this.componentDidMount();
 	};
 
 	render() {

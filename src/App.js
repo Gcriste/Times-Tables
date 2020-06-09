@@ -28,11 +28,11 @@ class App extends Component {
 		let numberA = Math.floor(Math.random() * 12);
 		let numberB = Math.floor(Math.random() * 12);
 
-		let answer = numberA * numberB;
+		let correctAnswer = numberA * numberB;
 		this.setState({
 			numberA: numberA,
 			numberB: numberB,
-			answer: answer
+			correctAnswer: correctAnswer
 		});
 
 		// generateNumbers();
@@ -47,7 +47,12 @@ class App extends Component {
 
 	handleSubmit = (event) => {
 		event.preventDefault();
-		if (this.state.userGuess === this.state.answer) {
+		if (parseInt(this.state.userGuess) === this.state.correctAnswer) {
+			let rightAnswers = [];
+			rightAnswers.push(this.state.correctAnswer);
+			this.setState({
+				rightAnswers: rightAnswers
+			});
 			console.log('right answer');
 		} else {
 			console.log('wrong answer');
@@ -66,7 +71,7 @@ class App extends Component {
 					// key={image.id}
 					numberA={this.state.numberA}
 					numberB={this.state.numberB}
-					answer={this.state.answer}
+					correctAnswer={this.state.correctAnswer}
 					// name={image.name}
 					// image={image.image}
 				/>

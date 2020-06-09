@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Title from './components/Title/Title';
-import { Main, Input } from './components/Main/Main';
+import { Main, Input, PostButton } from './components/Main/Main';
 import Score from './components/Score/Score';
 import Wrapper from './components/Wrapper/Wrapper';
 import Footer from './components/Footer/Footer';
@@ -19,7 +19,8 @@ class App extends Component {
 			status: '',
 			numberA: 0,
 			numberB: 0,
-			answer: 0
+			correctAnswer: 0,
+			userGuess: 0
 		};
 	}
 
@@ -44,6 +45,15 @@ class App extends Component {
 		});
 	};
 
+	handleSubmit = (event) => {
+		event.preventDefault();
+		if (this.state.userGuess === this.state.answer) {
+			console.log('right answer');
+		} else {
+			console.log('wrong answer');
+		}
+	};
+
 	render() {
 		return (
 			<Wrapper>
@@ -61,13 +71,14 @@ class App extends Component {
 					// image={image.image}
 				/>
 				<Input
-					value={this.state.answer}
+					value={this.state.userGuess}
 					onChange={this.handleCreateChange}
-					name='answer'
+					name='userGuess'
 					placeholder='Enter Answer'
 					type='name'
 				/>
 
+				<PostButton handleSubmit={this.handleSubmit} />
 				<Footer> copyright @Gcriste 2020</Footer>
 			</Wrapper>
 		);

@@ -10,7 +10,6 @@ export function Main(props) {
 					{props.numberA} * {props.numberB}
 				</h3>
 				<p className='picname'> {props.name}</p>
-				<input type='text'>Enter Answer</input>
 			</div>
 		</div>
 	);
@@ -23,5 +22,13 @@ export function Input(props) {
 				<input className='form-control' {...props} />
 			</div>
 		</div>
+	);
+}
+
+export function PostButton(props) {
+	return (
+		<button type='submit' className='btn btn-primary' tabindex='0' onClick={(event) => props.handleSubmit(event)}>
+			Submit
+		</button>
 	);
 }

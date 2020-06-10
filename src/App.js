@@ -91,44 +91,46 @@ class App extends Component {
 
 	render() {
 		return (
-			<Wrapper>
-				<Title>Times Tables!</Title>
-				<div className='container'>
-					<div className='card'>
-						<div className='row'>
-							<div className='col-md-6- offset-md-3'>
-								<Score total={this.state.score} highscore={this.state.highScore} />
+			<div>
+				<Wrapper>
+					<Title>Times Tables!</Title>
+					<div className='container'>
+						<div className='card'>
+							<div className='row'>
+								<div className='col-md-6- offset-md-3'>
+									<Score total={this.state.score} highscore={this.state.highScore} />
+								</div>
 							</div>
-						</div>
-						<div className='row'>
-							<div className='col-md-6 offset-md-3'>
-								<Main
-									numberA={this.state.numberA}
-									numberB={this.state.numberB}
-									status={this.state.status}
-								/>
-								<Input
-									value={this.state.userGuess}
-									onChange={this.handleCreateChange}
-									name='userGuess'
-									placeholder='Enter Answer'
-									type='name'
-								/>
+							<div className='row'>
+								<div className='col-md-6 offset-md-3'>
+									<Main
+										numberA={this.state.numberA}
+										numberB={this.state.numberB}
+										status={this.state.status}
+									/>
+									<Input
+										value={this.state.userGuess}
+										onChange={this.handleCreateChange}
+										name='userGuess'
+										placeholder='Enter Answer'
+										type='name'
+									/>
 
-								<PostButton handleSubmit={this.handleSubmit} />
+									<PostButton handleSubmit={this.handleSubmit} />
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<Footer> copyright @Gcriste 2020</Footer>
-				{/* <button onClick={this.toggleModal}>Open the modal</button> */}
+					{/* <button onClick={this.toggleModal}>Open the modal</button> */}
 
-				{/* <ModalDisplay show={this.state.isOpen} onClose={this.toggleModal}>
+					{/* <ModalDisplay show={this.state.isOpen} onClose={this.toggleModal}>
 					Here's some content for the modal
 				</ModalDisplay> */}
-				<ModalDisplay handleShow={this.handleShow} />
-			</Wrapper>
+					<ModalDisplay handleShow={this.handleShow} />
+				</Wrapper>
+				<Footer> copyright @Gcriste 2020</Footer>
+			</div>
 		);
 	}
 }

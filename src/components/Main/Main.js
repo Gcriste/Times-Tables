@@ -9,7 +9,7 @@ export function Main(props) {
 					{' '}
 					{props.numberA} * {props.numberB}
 				</h3>
-				<p className='picname'> {props.name}</p>
+				<p className='status'>{props.status}</p>
 			</div>
 		</div>
 	);

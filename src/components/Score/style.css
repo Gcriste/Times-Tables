@@ -3,19 +3,12 @@
 	font-family: 'Gayathri', sans-serif;
 	/* font-size: 34px; */
 }
-
-/* .gameScore {
-	border: 5px solid black;
-	border-radius: 15px;
-	background-color: #ffffff;
-} */
-
-/* .gameScoreTwo {
-	border: 5px solid #6caddc;
-	padding: 10px;
-	border-radius: 10px;
-} */
-
-.status {
-	color: blue;
+.gameScore {
+	padding: 15px;
+	border-radius: 25px;
+	/* height: 200px; */
+	margin: 1rem;
+	width: 200px;
+	box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+	text-align: center;
 }

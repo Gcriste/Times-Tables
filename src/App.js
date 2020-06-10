@@ -5,6 +5,7 @@ import { Main, Input, PostButton } from './components/Main/Main';
 import Score from './components/Score/Score';
 import Wrapper from './components/Wrapper/Wrapper';
 import Footer from './components/Footer/Footer';
+import ModalDisplay from './components/Modal/Modal';
 
 class App extends Component {
 	// Setting this.state.images to the images json array
@@ -19,7 +20,8 @@ class App extends Component {
 			numberA: 0,
 			numberB: 0,
 			correctAnswer: 0,
-			userGuess: 0
+			userGuess: 0,
+			isOpen: false
 		};
 	}
 
@@ -64,6 +66,10 @@ class App extends Component {
 				status: "I'm sorry that is not correct! The answer is " + this.state.correctAnswer
 			});
 
+			// handleShow = (event) => {
+			// 	this.setState({ handleShow: true });
+			// };
+
 			if (this.state.score > this.state.highScore) {
 				this.setState({
 					highScore: this.state.score
@@ -77,6 +83,12 @@ class App extends Component {
 		this.componentDidMount();
 	};
 
+	toggleModal = () => {
+		this.setState({
+			isOpen: !this.state.isOpen
+		});
+	};
+
 	render() {
 		return (
 			<Wrapper>
@@ -85,11 +97,7 @@ class App extends Component {
 					<div className='card'>
 						<div className='row'>
 							<div className='col-md-6- offset-md-3'>
-								<Score
-									total={this.state.score}
-									status={this.state.status}
-									highscore={this.state.highScore}
-								/>
+								<Score total={this.state.score} highscore={this.state.highScore} />
 							</div>
 						</div>
 						<div className='row'>
@@ -97,7 +105,7 @@ class App extends Component {
 								<Main
 									numberA={this.state.numberA}
 									numberB={this.state.numberB}
-									correctAnswer={this.state.correctAnswer}
+									status={this.state.status}
 								/>
 								<Input
 									value={this.state.userGuess}
@@ -114,6 +122,12 @@ class App extends Component {
 				</div>
 
 				<Footer> copyright @Gcriste 2020</Footer>
+				{/* <button onClick={this.toggleModal}>Open the modal</button> */}
+
+				{/* <ModalDisplay show={this.state.isOpen} onClose={this.toggleModal}>
+					Here's some content for the modal
+				</ModalDisplay> */}
+				<ModalDisplay handleShow={this.handleShow} />
 			</Wrapper>
 		);
 	}

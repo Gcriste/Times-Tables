@@ -9,7 +9,7 @@ export function Main(props) {
 					{' '}
 					{props.numberA} x {props.numberB}
 				</h3>
-				<p className='status'>{props.status}</p>
+				<h3 className='status'>{props.status}</h3>
 			</div>
 		</div>
 	);

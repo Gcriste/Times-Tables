@@ -26,7 +26,7 @@ class App extends Component {
 	}
 
 	hideModal = () => {
-		this.setState({ show: false });
+		this.setState({ show: false, status: '' });
 	};
 
 	showModal = () => {
@@ -50,7 +50,8 @@ class App extends Component {
 	handleCreateChange = (event) => {
 		const { name, value } = event.target;
 		this.setState({
-			[name]: value
+			[name]: value,
+			status: ''
 		});
 	};
 
@@ -121,7 +122,7 @@ class App extends Component {
 										type='name'
 									/>{' '}
 									<Modal show={this.state.show} handleClose={this.hideModal}>
-										<p> {this.state.status}</p>
+										<h3> {this.state.status}</h3>
 									</Modal>
 									<PostButton handleSubmit={this.handleSubmit} />
 								</div>

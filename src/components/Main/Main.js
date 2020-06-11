@@ -7,7 +7,7 @@ export function Main(props) {
 			<div className='img-container'>
 				<h3 className='numbers'>
 					{' '}
-					{props.numberA} * {props.numberB}
+					{props.numberA} x {props.numberB}
 				</h3>
 				<p className='status'>{props.status}</p>
 			</div>

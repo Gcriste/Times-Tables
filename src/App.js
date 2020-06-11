@@ -5,7 +5,7 @@ import { Main, Input, PostButton } from './components/Main/Main';
 import Score from './components/Score/Score';
 import Wrapper from './components/Wrapper/Wrapper';
 import Footer from './components/Footer/Footer';
-import ModalDisplay from './components/Modal/Modal';
+import Modal from './components/Modal/Modal';
 
 class App extends Component {
 	// Setting this.state.images to the images json array
@@ -21,10 +21,17 @@ class App extends Component {
 			numberB: 0,
 			correctAnswer: 0,
 			userGuess: 0,
-			isOpen: false
+			show: false
 		};
 	}
 
+	hideModal = () => {
+		this.setState({ show: false });
+	};
+
+	showModal = () => {
+		this.setState({ show: true });
+	};
 	componentDidMount() {
 		let numberA = Math.floor(Math.random() * 12);
 		let numberB = Math.floor(Math.random() * 12);
@@ -33,7 +40,8 @@ class App extends Component {
 		this.setState({
 			numberA: numberA,
 			numberB: numberB,
-			correctAnswer: correctAnswer
+			correctAnswer: correctAnswer,
+			userGuess: ''
 		});
 
 		// generateNumbers();
@@ -63,12 +71,15 @@ class App extends Component {
 			this.setState({
 				rightAnswers: [],
 				score: 0,
-				status: "I'm sorry that is not correct! The answer is " + this.state.correctAnswer
+				status:
+					"I'm sorry that is not correct! The answer is " +
+					this.state.numberA +
+					' x ' +
+					this.state.numberB +
+					' = ' +
+					this.state.correctAnswer,
+				show: true
 			});
-
-			// handleShow = (event) => {
-			// 	this.setState({ handleShow: true });
-			// };
 
 			if (this.state.score > this.state.highScore) {
 				this.setState({
@@ -81,12 +92,6 @@ class App extends Component {
 			}
 		}
 		this.componentDidMount();
-	};
-
-	toggleModal = () => {
-		this.setState({
-			isOpen: !this.state.isOpen
-		});
 	};
 
 	render() {
@@ -114,20 +119,15 @@ class App extends Component {
 										name='userGuess'
 										placeholder='Enter Answer'
 										type='name'
-									/>
-
+									/>{' '}
+									<Modal show={this.state.show} handleClose={this.hideModal}>
+										<p> {this.state.status}</p>
+									</Modal>
 									<PostButton handleSubmit={this.handleSubmit} />
 								</div>
 							</div>
 						</div>
 					</div>
-
-					{/* <button onClick={this.toggleModal}>Open the modal</button> */}
-
-					{/* <ModalDisplay show={this.state.isOpen} onClose={this.toggleModal}>
-					Here's some content for the modal
-				</ModalDisplay> */}
-					<ModalDisplay handleShow={this.handleShow} />
 				</Wrapper>
 				<Footer> copyright @Gcriste 2020</Footer>
 			</div>

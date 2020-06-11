@@ -37,3 +37,76 @@
 .display-none {
 	display: none;
 }
+
+.footer {
+	border-top: 5px solid black;
+	font-family: 'Gayathri', sans-serif;
+}
+
+/* .status {
+	color: blueviolet;
+} */
+.img-container {
+	height: 100%;
+	overflow: hidden;
+	text-align: center;
+	background: #c5c5c5;
+	box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+}
+
+.content {
+	padding-left: 1rem;
+	padding-right: 1rem;
+	font-size: 15px;
+}
+
+.numbers {
+	margin: 30px;
+}
+
+.btn {
+	box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+}
+
+.postbutton {
+	text-align: center;
+}
+
+.score,
+.highscore {
+	font-family: 'Gayathri', sans-serif;
+	/* font-size: 34px; */
+}
+.gameScore {
+	padding: 15px;
+	border-radius: 5px;
+	margin: 10px;
+	width: 60%;
+	box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+	background-color: #275d85;
+	color: white;
+}
+
+/* .highscore {
+	color: blue;
+} */
+
+.title,
+.directions {
+	font-family: 'Gayathri', sans-serif;
+}
+
+.wrapper {
+	padding-top: 50px;
+	background: #eceff1;
+	height: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	padding: 20px;
+	justify-content: space-around;
+	align-content: flex-start;
+	overflow: auto;
+}

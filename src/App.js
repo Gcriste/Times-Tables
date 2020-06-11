@@ -9,6 +9,7 @@ import Nav from './components/Nav';
 import Add from './components/Add';
 import Subtract from './components/Subtract';
 import Multiply from './components/Multiply';
+import Divide from './components/Divide';
 
 function App() {
 	return (
@@ -21,7 +22,7 @@ function App() {
 					<Route exact path='/add' component={Add} />
 					<Route exact path='/subtract' component={Subtract} />
 					<Route exact path='/multiply' component={Multiply} />
-					{/* <Route exact path='/divide' component={Divide} /> */}
+					<Route exact path='/divide' component={Divide} />
 					<Route component={NoMatch} />
 				</Switch>
 			</div>

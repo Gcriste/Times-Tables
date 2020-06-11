@@ -1,12 +1,57 @@
 import React from 'react';
 
-export function Main(props) {
+export function MainMultiply(props) {
 	return (
 		<div className='pics' onClick={() => props.generateNumbers(props.id)}>
 			<div className='img-container'>
 				<h1 className='numbers'>
 					{' '}
 					{props.numberA} x {props.numberB}
+				</h1>
+				<hr />
+				<h3 className='status'>{props.status}</h3>
+			</div>
+		</div>
+	);
+}
+
+export function MainAdd(props) {
+	return (
+		<div className='pics' onClick={() => props.generateNumbers(props.id)}>
+			<div className='img-container'>
+				<h1 className='numbers'>
+					{' '}
+					{props.numberA} + {props.numberB}
+				</h1>
+				<hr />
+				<h3 className='status'>{props.status}</h3>
+			</div>
+		</div>
+	);
+}
+
+export function MainSubtract(props) {
+	return (
+		<div className='pics' onClick={() => props.generateNumbers(props.id)}>
+			<div className='img-container'>
+				<h1 className='numbers'>
+					{' '}
+					{props.numberA} - {props.numberB}
+				</h1>
+				<hr />
+				<h3 className='status'>{props.status}</h3>
+			</div>
+		</div>
+	);
+}
+
+export function MainDivide(props) {
+	return (
+		<div className='pics' onClick={() => props.generateNumbers(props.id)}>
+			<div className='img-container'>
+				<h1 className='numbers'>
+					{' '}
+					{props.numberA} <i class='fas fa-divide' /> {props.numberB}
 				</h1>
 				<hr />
 				<h3 className='status'>{props.status}</h3>

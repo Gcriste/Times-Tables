@@ -110,3 +110,13 @@
 	align-content: flex-start;
 	overflow: auto;
 }
+
+.nav-item {
+	border: 3px solid black;
+	border-radius: 5px;
+	margin: 5px;
+}
+
+.nav-item:hover {
+	background-color: grey;
+}

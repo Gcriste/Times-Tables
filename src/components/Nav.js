@@ -2,9 +2,12 @@ import React from 'react';
 
 function Nav() {
 	return (
-		<nav className='navbar navbar-expand-lg navbar-dark' style={{ backgroundColor: '#0087E5' }}>
+		<nav
+			className='navbar navbar-expand-lg navbar-dark'
+			style={{ backgroundColor: '#0087E5', borderBottom: '5px solid black' }}
+		>
 			<a className='navbar-brand' href='/'>
-				<h2 className='header'>Gear Trader</h2>
+				<h2 className='header'>Math Whiz!</h2>
 			</a>
 
 			<button
@@ -22,31 +25,28 @@ function Nav() {
 				<ul className='navbar-nav'>
 					<li className='nav-item active' id='dashboard'>
 						<a className='nav-link' href='/dashboard'>
-							<span className='material-icons d-none d-md-inline'>home</span> Home
-						</a>
-					</li>
-					<li className='nav-item active' id='multiply'>
-						<a className='nav-link' href='/multiply'>
-							<span className='material-icons'>queue_music</span>{' '}
-							<span className='d-none d-md-inline'>Multiplication</span>
-						</a>
-					</li>
-					<li className='nav-item active' id='divide'>
-						<a className='nav-link' href='/divide'>
-							<span className='material-icons'>post_add</span>{' '}
-							<span className='d-none d-md-inline'>Dividision</span>
+							<i class='fas fa-house-user' />
+							<span className='d-none d-md-inline'> Home</span>
 						</a>
 					</li>
 					<li className='nav-item active' id='add'>
 						<a className='nav-link' href='/add'>
-							<span className='material-icons'>local_offer</span>{' '}
-							<span className='d-none d-md-inline'>Addition</span>
+							<i class='fas fa-plus' /> <span className='d-none d-md-inline'> Addition</span>
 						</a>
 					</li>
 					<li className='nav-item active' id='subtract'>
 						<a className='nav-link' href='/subtract'>
-							<span className='material-icons'>comment</span>{' '}
-							<span className='d-none d-md-inline'>Subtraction</span>
+							<i class='fas fa-minus' /> <span className='d-none d-md-inline'> Subtraction</span>
+						</a>
+					</li>
+					<li className='nav-item active' id='multiply'>
+						<a className='nav-link' href='/multiply'>
+							<i class='fas fa-times' /> <span className='d-none d-md-inline'> Multiplication</span>
+						</a>
+					</li>
+					<li className='nav-item active' id='divide'>
+						<a className='nav-link' href='/divide'>
+							<i class='fas fa-divide' /> <span className='d-none d-md-inline'> Division</span>
 						</a>
 					</li>
 				</ul>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Title from './Title';
-import { MainMultiply, Input, PostButton } from './Main';
+import { MainSubtract, Input, PostButton } from './Main';
 import Score from './Score';
 import Wrapper from './Wrapper';
 import Footer from './Footer';
@@ -8,7 +8,7 @@ import Modal from './Modal';
 import Fade from 'react-reveal/Fade';
 import RubberBand from 'react-reveal/RubberBand';
 
-class Multiply extends Component {
+class Subtract extends Component {
 	// Setting this.state.images to the images json array
 
 	constructor(props) {
@@ -34,10 +34,10 @@ class Multiply extends Component {
 		this.setState({ show: true });
 	};
 	componentDidMount() {
-		let numberA = Math.floor(Math.random() * 12);
-		let numberB = Math.floor(Math.random() * 12);
+		let numberA = Math.floor(Math.random() * 50);
+		let numberB = Math.floor(Math.random() * 50);
 
-		let correctAnswer = numberA * numberB;
+		let correctAnswer = numberA - numberB;
 		this.setState({
 			numberA: numberA,
 			numberB: numberB,
@@ -76,7 +76,7 @@ class Multiply extends Component {
 				status:
 					"I'm sorry that is not correct! The answer is " +
 					this.state.numberA +
-					' x ' +
+					' - ' +
 					this.state.numberB +
 					' = ' +
 					this.state.correctAnswer,
@@ -113,7 +113,7 @@ class Multiply extends Component {
 							<div className='row'>
 								<div className='col-md-6 offset-md-3'>
 									<Fade>
-										<MainMultiply
+										<MainSubtract
 											numberA={this.state.numberA}
 											numberB={this.state.numberB}
 											status={this.state.status}
@@ -142,4 +142,4 @@ class Multiply extends Component {
 	}
 }
 
-export default Multiply;
+export default Subtract;

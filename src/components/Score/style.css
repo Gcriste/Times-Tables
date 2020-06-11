@@ -6,13 +6,13 @@
 .gameScore {
 	padding: 15px;
 	border-radius: 5px;
-	/* height: 200px; */
-	margin: 1rem;
-	width: 200px;
+	margin: 10px;
+	width: 60%;
 	box-shadow: 0 3px 6px #999, 0 3px 6px #999;
-	text-align: center;
+	background-color: #275d85;
+	color: white;
 }
 
-.highscore {
+/* .highscore {
 	color: blue;
-}
+} */

@@ -5,10 +5,11 @@ export function Main(props) {
 	return (
 		<div className='pics' onClick={() => props.generateNumbers(props.id)}>
 			<div className='img-container'>
-				<h3 className='numbers'>
+				<h1 className='numbers'>
 					{' '}
 					{props.numberA} x {props.numberB}
-				</h3>
+				</h1>
+				<hr />
 				<h3 className='status'>{props.status}</h3>
 			</div>
 		</div>
@@ -27,8 +28,15 @@ export function Input(props) {
 
 export function PostButton(props) {
 	return (
-		<button type='submit' className='btn btn-primary' tabindex='0' onClick={(event) => props.handleSubmit(event)}>
-			Submit
-		</button>
+		<div className='postbutton'>
+			<button
+				type='submit'
+				className='btn btn-primary'
+				tabindex='0'
+				onClick={(event) => props.handleSubmit(event)}
+			>
+				Submit
+			</button>
+		</div>
 	);
 }

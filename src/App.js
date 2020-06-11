@@ -103,7 +103,7 @@ class App extends Component {
 					<div className='container'>
 						<div className='card'>
 							<div className='row'>
-								<div className='col-md-6- offset-md-3'>
+								<div className='col-md-6 offset-md-4 text-center'>
 									<Score total={this.state.score} highscore={this.state.highScore} />
 								</div>
 							</div>

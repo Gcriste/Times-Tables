@@ -1,12 +1,15 @@
-.status {
+/* .status {
 	color: blueviolet;
-}
+} */
 .img-container {
 	height: 100%;
 	overflow: hidden;
 	text-align: center;
-	background: #6caddc;
+	background: #c5c5c5;
 	box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	padding-bottom: 5px;
 }
 
 .content {
@@ -17,4 +20,12 @@
 
 .numbers {
 	margin: 30px;
+}
+
+.btn {
+	box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+}
+
+.postbutton {
+	text-align: center;
 }

@@ -34,7 +34,7 @@ class Divide extends Component {
 		this.setState({ show: true });
 	};
 	componentDidMount() {
-		let numberA = Math.floor(Math.random() * 12);
+		let numberA = Math.floor(Math.random() * 80);
 		let numberB = Math.floor(Math.random() * 12);
 
 		let correctAnswer = Math.floor(numberA / numberB);
@@ -100,7 +100,7 @@ class Divide extends Component {
 		return (
 			<div>
 				<Wrapper>
-					<Title>Work on your multiplication skills!</Title>
+					<Title>Work on your division skills!</Title>
 					<div className='container'>
 						<div className='card'>
 							<div className='row'>

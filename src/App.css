@@ -41,6 +41,14 @@
 .footer {
 	border-top: 5px solid black;
 	font-family: 'Gayathri', sans-serif;
+	background-color: #8bc0d0;
+	height: 80px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	padding-top: 20px;
 }
 
 /* .status {

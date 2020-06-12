@@ -100,7 +100,7 @@ class Subtract extends Component {
 		return (
 			<div>
 				<Wrapper>
-					<Title>Work on your multiplication skills!</Title>
+					<Title>Work on your subtraction skills!</Title>
 					<div className='container'>
 						<div className='card'>
 							<div className='row'>

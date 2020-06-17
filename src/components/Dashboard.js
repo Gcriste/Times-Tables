@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
 import Title from './Title';
-import { Main, Input, PostButton } from './Main';
-import Score from './Score';
 import Wrapper from './Wrapper';
 import Footer from './Footer';
-import Modal from './Modal';
-import Fade from 'react-reveal/Fade';
-import RubberBand from 'react-reveal/RubberBand';
 
 class Dashboard extends Component {
 	render() {

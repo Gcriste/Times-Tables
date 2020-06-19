@@ -41,7 +41,15 @@ class Dashboard extends Component {
 						</div>
 					</div>
 				</Wrapper>
-				<Footer> copyright @Gcriste 2020</Footer>
+				<Footer>
+					{' '}
+					<p>
+						&copy; <em>GcristeProductions</em>{' '}
+						<strong>
+							<a href='mailto:griffincriste@gmail.com'>Email Me</a>
+						</strong>
+					</p>
+				</Footer>
 			</div>
 		);
 	}

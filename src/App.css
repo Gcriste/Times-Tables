@@ -42,7 +42,7 @@
 	border-top: 5px solid black;
 	font-family: 'Gayathri', sans-serif;
 	background-color: #8bc0d0;
-	height: 80px;
+	height: 70px;
 	position: fixed;
 	left: 0;
 	bottom: 0;
@@ -69,6 +69,16 @@
 	padding-left: 1rem;
 	padding-right: 1rem;
 	font-size: 15px;
+}
+.picture {
+	border: 10px solid transparent;
+	border-radius: 25%;
+	margin: 2px;
+}
+.picture:hover {
+	border: 10px solid grey;
+	border-radius: 25%;
+	box-shadow: 0 2px 4px 4px grey;
 }
 
 .numbers {
